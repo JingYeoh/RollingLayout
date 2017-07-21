@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jkb.demo.MainActivity">
+
+    <com.jkb.rollinglayout.RollingLayout
+        android:id="@+id/rolling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="20dp"
+            android:text="Hello World One!"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:padding="20dp"
+            android:text="Hello World Two!"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:text="Hello World Three!"
+            />
+    </com.jkb.rollinglayout.RollingLayout>
+
+
+</LinearLayout>

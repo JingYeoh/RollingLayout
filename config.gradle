@@ -1,0 +1,39 @@
+ext {
+    app = [
+            appVerCode   : 1,
+            appVerName   : "0.0.1",
+            applicationId: "com.jkb.rollinglayout"
+    ]
+
+    rollinglayout = [
+            publishCode   : 1,
+            publishVersion: "1.0.0",
+
+            userOrg       : 'jkb',
+            groupId       : 'com.justkiddingbaby',
+            artifactId    : 'rollinglayout',
+            desc          : 'A view that can rolling automatic within child views list .',
+            website       : 'https://github.com/YangJing96/RollingLayout'
+    ]
+
+    android = [
+            minSdkVersion             : 12,
+            targetSdkVersion          : 23,
+            compileSdkVersion         : 23,
+            buildToolsVersion         : "25.0.0",
+            sourceCompatibilityVersion: JavaVersion.VERSION_1_7,
+            targetCompatibilityVersion: JavaVersion.VERSION_1_7
+    ]
+
+    dependencies = [
+            appcompatV7: 'com.android.support:appcompat-v7:23.3.0',
+            design     : 'com.android.support:design:24.0.0'
+    ]
+
+    store = [
+            storeKey     : '../sign/JustKiddingBaby.jks',
+            storePassword: 'mimajiushiwo',
+            keyAlias     : 'JustKiddingBaby',
+            keyPassword  : 'mimajiushiwo'
+    ]
+}

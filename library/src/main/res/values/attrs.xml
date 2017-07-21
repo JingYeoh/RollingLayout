@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--The attributes of RollingLayout-->
+    <declare-styleable name="RollingLayout">
+        <!--the rolling orientation-->
+        <attr name="rolling_orientation" format="enum">
+            <enum name="upDown" value="1001"/>
+            <enum name="downUp" value="1002"/>
+            <enum name="leftRight" value="2001"/>
+            <enum name="rightLeft" value="2002"/>
+        </attr>
+        <!--the spend time of each rolling-->
+        <attr name="rolling_eachTime" format="integer"/>
+        <!--the pause time when the child view rolling complected-->
+        <attr name="rolling_pause" format="integer"/>
+    </declare-styleable>
+
+</resources>
