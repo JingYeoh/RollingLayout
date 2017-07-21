@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         RollingLayout rollingLayout = (RollingLayout) findViewById(R.id.rolling);
+        rollingLayout.setAdapter(new RollingAdaper(this));
         rollingLayout.startRolling();
     }
 }
