@@ -13,7 +13,7 @@ ext {
             groupId       : 'com.justkiddingbaby',
             artifactId    : 'rollinglayout',
             desc          : 'A view that can rolling automatic within child views list .',
-            website       : 'https://github.com/YangJing96/RollingLayout'
+            website       : 'https://github.com/JustKiddingBaby/RollingLayout'
     ]
 
     android = [
