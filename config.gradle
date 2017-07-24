@@ -1,13 +1,13 @@
 ext {
     app = [
             appVerCode   : 1,
-            appVerName   : "0.0.1",
+            appVerName   : "0.1",
             applicationId: "com.jkb.rollinglayout"
     ]
 
     rollinglayout = [
             publishCode   : 1,
-            publishVersion: "1.0.0",
+            publishVersion: "0.1",
 
             userOrg       : 'jkb',
             groupId       : 'com.justkiddingbaby',

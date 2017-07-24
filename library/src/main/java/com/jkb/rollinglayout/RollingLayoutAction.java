@@ -1,6 +1,9 @@
 package com.jkb.rollinglayout;
 
 import android.support.annotation.IntDef;
+import android.support.annotation.NonNull;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.lang.annotation.Retention;
@@ -13,7 +16,7 @@ import java.lang.annotation.RetentionPolicy;
  * Created by yangjing on 17-7-21.
  */
 
-public interface RollingLayoutAction {
+interface RollingLayoutAction {
 
     /**
      * @hide
@@ -79,4 +82,38 @@ public interface RollingLayoutAction {
      * stop the RollingLayout rolling.
      */
     void stopRolling();
+
+    /**
+     * add a listener to listen RollingLayout rolling changed action.
+     */
+    void addOnRollingChangedListener(@NonNull OnRollingChangedListener onRollingChangedListener);
+
+    /**
+     * listener for listen RollingLayout changed action.
+     */
+    public interface OnRollingChangedListener {
+
+        /**
+         * This method will be called when rolling is changed.
+         *
+         * @param currentPosition current position of rolling list.
+         * @param sumPosition     sum position of rolling list.
+         */
+        void onRollingChanged(int currentPosition, int sumPosition);
+    }
+
+    /**
+     * listener for listen RollingLayout item view is clicked.
+     */
+    public interface OnRollingItemClickListener {
+
+        /**
+         * this method will be called when rolling item is clicked.
+         *
+         * @param view     item view.
+         * @param parent   RollingLayout view.
+         * @param position the item position that is clicked.
+         */
+        void onRollingItemClick(View view, ViewGroup parent, int position);
+    }
 }

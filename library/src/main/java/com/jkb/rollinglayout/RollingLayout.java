@@ -32,10 +32,16 @@ public class RollingLayout extends FrameLayout implements RollingLayoutAction {
 
     //data
     private static final int WHAT_ROLLING_NEXT = 1001;
-    private static final int WHAT_REQUEST_LAYOUT = 1002;
+    private static final int WHAT_ROLLING_STOP = 1002;
+    private static final int WHAT_REQUEST_LAYOUT = 2001;
     private int mCurrentPosition = 0;
+    private boolean isAllowScroll = false;
     private RollingHandler rollingHandler;
     private Scroller mScroller;
+
+    //listener
+    private OnRollingChangedListener onRollingChangedListener;
+    private OnRollingItemClickListener onRollingItemClickListener;
 
 
     public RollingLayout(@NonNull Context context) {
@@ -107,7 +113,14 @@ public class RollingLayout extends FrameLayout implements RollingLayoutAction {
 
     @Override
     public void stopRolling() {
+        if (rollingHandler != null) {
+            rollingHandler.sendEmptyMessage(WHAT_ROLLING_STOP);
+        }
+    }
 
+    @Override
+    public void addOnRollingChangedListener(@NonNull OnRollingChangedListener onRollingChangedListener) {
+        this.onRollingChangedListener = onRollingChangedListener;
     }
 
     @Override
@@ -207,7 +220,7 @@ public class RollingLayout extends FrameLayout implements RollingLayoutAction {
             }
         }
 
-        if (rollingHandler != null) {
+        if (rollingHandler != null && isAllowScroll) {
             rollingHandler.sendEmptyMessageDelayed(WHAT_ROLLING_NEXT, mPauseTime);
         }
     }
@@ -226,9 +239,12 @@ public class RollingLayout extends FrameLayout implements RollingLayoutAction {
             scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
             invalidate();
         } else {
+            if (onRollingChangedListener != null) {
+                onRollingChangedListener.onRollingChanged(mCurrentPosition, getChildCount());
+            }
             if (mCurrentPosition == getChildCount()) {
 //                rollingHandler.sendEmptyMessage(WHAT_REQUEST_LAYOUT);
-            } else {
+            } else if (isAllowScroll) {
                 rollingHandler.sendEmptyMessageDelayed(WHAT_ROLLING_NEXT, mPauseTime);
             }
         }
@@ -254,9 +270,13 @@ public class RollingLayout extends FrameLayout implements RollingLayoutAction {
                     rollingLayout.requestLayout();*/
                     break;
                 case WHAT_ROLLING_NEXT:
+                    rollingLayout.isAllowScroll = true;
                     rollingLayout.mCurrentPosition++;
                     rollingLayout.mCurrentPosition %= rollingLayout.getChildCount();
                     rollingLayout.smoothScrollTo(0, rollingLayout.mCurrentPosition * rollingLayout.getMeasuredHeight());
+                    break;
+                case WHAT_ROLLING_STOP:
+                    rollingLayout.isAllowScroll = false;
                     break;
             }
         }

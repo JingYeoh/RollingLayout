@@ -12,11 +12,11 @@ import android.widget.BaseAdapter;
  * Created by yangjing on 17-7-21.
  */
 
-public class RollingAdaper extends BaseAdapter {
+public class RollingAdapter extends BaseAdapter {
 
     private Context context;
 
-    public RollingAdaper(Context context) {
+    public RollingAdapter(Context context) {
         this.context = context;
     }
 
