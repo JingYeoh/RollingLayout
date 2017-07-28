@@ -1,4 +1,4 @@
-# SlideMenuLayout
+# RollingLayout
 ## Introduction
 A view that can rolling automatic within child views list.   
 一个可以让自己子视图滚动起来的控件(仿[淘宝头条])。([中文版入口](README-CN.md))  
