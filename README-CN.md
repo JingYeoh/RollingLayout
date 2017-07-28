@@ -1,6 +1,6 @@
 # RollingLayout
 ## Introduction
->一个可以让自己子视图滚动起来的控件(仿[淘宝头条])。([English README](README.md))
+一个可以让自己子视图滚动起来的控件(仿[淘宝头条])。([English README](README.md))
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 <img src="https://img.shields.io/badge/license-Apache 2.0-green.svg?style=flat">
