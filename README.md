@@ -85,3 +85,7 @@ compile 'com.justkiddingbaby:rollinglayout:the latest version'
 2、add listener for RollingLayout.
 #### v0.1(2017/7/24)
 1、release version 0.1.
+
+## License
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/License_icon-mit-88x31-2.svg/128px-License_icon-mit-88x31-2.svg.png)
+RollingLayout is available under the MIT license. See the LICENSE file for more info.

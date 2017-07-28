@@ -84,3 +84,7 @@ compile 'com.justkiddingbaby:rollinglayout:最新版'
 2、添加监听器.
 #### v0.1(2017/7/24)
 1、发布版本0.1.
+
+## 许可
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/License_icon-mit-88x31-2.svg/128px-License_icon-mit-88x31-2.svg.png)
+RollingLayout遵循MIT开源许可协议.查看更多信息请点击LICENSE.
