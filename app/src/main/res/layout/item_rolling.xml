@@ -15,7 +15,7 @@
             android:background="@drawable/bg_text_round_red"
             android:padding="2dp"
             android:text="hot"
-            android:textColor="#ff0000"/>
+            android:textColor="@color/Cranberry"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_marginRight="5dp"
             android:singleLine="true"
             android:text="rolling content top one."
-            android:textColor="#000000"/>
+            android:textColor="@color/colorAccent"/>
     </LinearLayout>
 
     <LinearLayout
@@ -40,7 +40,7 @@
             android:background="@drawable/bg_text_round_red"
             android:padding="2dp"
             android:text="hot"
-            android:textColor="#ff0000"/>
+            android:textColor="@color/Cranberry"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -49,6 +49,6 @@
             android:layout_marginRight="5dp"
             android:singleLine="true"
             android:text="rolling content bottom one."
-            android:textColor="#000000"/>
+            android:textColor="@color/colorAccent"/>
     </LinearLayout>
 </LinearLayout>

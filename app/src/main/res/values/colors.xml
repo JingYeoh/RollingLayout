@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#493E58</color>
+    <color name="colorPrimaryDark">#493E58</color>
+    <color name="colorAccent">#8E8485</color>
+
+    <color name="MulledWine">#493E58</color>
+    <color name="LinkWater">#C8CACC</color>
+    <color name="Venus">#8E8485</color>
+    <color name="EchoBlue">#B8BABE</color>
+    <color name="Cranberry">#DD4375</color>
+    <color name="Mischka">#A7A8AD</color>
 </resources>

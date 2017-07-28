@@ -6,6 +6,7 @@ import android.support.annotation.AnimRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
@@ -18,7 +19,7 @@ import android.widget.ViewFlipper;
  * Created by yangjing on 17-7-21.
  */
 
-public class RollingLayout extends ViewFlipper implements RollingLayoutAction {
+public class RollingLayout extends ViewFlipper implements RollingLayoutAction, View.OnClickListener {
 
     private static final String TAG = "RollingLayout";
     //attrs
@@ -26,8 +27,6 @@ public class RollingLayout extends ViewFlipper implements RollingLayoutAction {
     private int mOrientation;
     private int mEachTime;
     private int mPauseTime;
-
-    //data
 
     //listener
     private OnRollingChangedListener onRollingChangedListener;
@@ -57,6 +56,14 @@ public class RollingLayout extends ViewFlipper implements RollingLayoutAction {
         setRollingPauseTime(mPauseTime);
         setRollingEachTime(mEachTime);
         setRollingOrientation(mOrientation);
+    }
+
+    @Override
+    public void showNext() {
+        super.showNext();
+        if (onRollingChangedListener != null) {
+            onRollingChangedListener.onRollingChanged(this, getDisplayedChild(), getChildCount());
+        }
     }
 
     @Override
@@ -119,6 +126,12 @@ public class RollingLayout extends ViewFlipper implements RollingLayoutAction {
         this.onRollingChangedListener = onRollingChangedListener;
     }
 
+    @Override
+    public void setOnRollingItemClickListener(@NonNull OnRollingItemClickListener onRollingItemClickListener) {
+        this.onRollingItemClickListener = onRollingItemClickListener;
+        setOnClickListener(this);
+    }
+
     /**
      * return Animator and set duration time.
      *
@@ -129,5 +142,12 @@ public class RollingLayout extends ViewFlipper implements RollingLayoutAction {
         Animation animation = AnimationUtils.loadAnimation(getContext(), animId);
         animation.setDuration(mEachTime);
         return animation;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (onRollingItemClickListener != null) {
+            onRollingItemClickListener.onRollingItemClick(getChildAt(getDisplayedChild()), this, getDisplayedChild());
+        }
     }
 }

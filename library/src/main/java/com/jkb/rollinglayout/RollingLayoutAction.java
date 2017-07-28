@@ -16,7 +16,7 @@ import java.lang.annotation.RetentionPolicy;
  * Created by yangjing on 17-7-21.
  */
 
-interface RollingLayoutAction {
+public interface RollingLayoutAction {
 
     /**
      * @hide
@@ -89,23 +89,29 @@ interface RollingLayoutAction {
     void addOnRollingChangedListener(@NonNull OnRollingChangedListener onRollingChangedListener);
 
     /**
+     * set a listener to listen RolligLayout rolling item click action.
+     */
+    void setOnRollingItemClickListener(@NonNull OnRollingItemClickListener onRollingItemClickListener);
+
+    /**
      * listener for listen RollingLayout changed action.
      */
-    public interface OnRollingChangedListener {
+    interface OnRollingChangedListener {
 
         /**
          * This method will be called when rolling is changed.
          *
+         * @param rollingLayout   {@link RollingLayout}
          * @param currentPosition current position of rolling list.
          * @param sumPosition     sum position of rolling list.
          */
-        void onRollingChanged(int currentPosition, int sumPosition);
+        void onRollingChanged(View rollingLayout, int currentPosition, int sumPosition);
     }
 
     /**
      * listener for listen RollingLayout item view is clicked.
      */
-    public interface OnRollingItemClickListener {
+    interface OnRollingItemClickListener {
 
         /**
          * this method will be called when rolling item is clicked.

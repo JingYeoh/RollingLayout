@@ -5,18 +5,163 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context="com.jkb.demo.MainActivity">
 
-    <com.jkb.rollinglayout.RollingLayout
-        android:id="@+id/rolling"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        rolling:rolling_eachTime="800"
-        rolling:rolling_orientation="upDown"
-        rolling:rolling_pause="2000">
-    </com.jkb.rollinglayout.RollingLayout>
+        android:padding="15dp"
+        android:text="RollingLayout"
+        android:textColor="@color/LinkWater"
+        android:textSize="20sp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Venus"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="upDown eachTime=800 pause=2000"
+        android:textColor="@color/LinkWater"
+        android:textSize="15sp"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.jkb.rollinglayout.RollingLayout
+            android:id="@+id/rollingUpDown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            rolling:rolling_eachTime="800"
+            rolling:rolling_orientation="upDown"
+            rolling:rolling_pause="2000"/>
+
+        <TextView
+            android:id="@+id/am_rolling_upDown_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="(0/0)"
+            android:textColor="@color/Cranberry"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Venus"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="downUp eachTime=300 pause=1000"
+        android:textColor="@color/LinkWater"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.jkb.rollinglayout.RollingLayout
+            android:id="@+id/rollingdownUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            rolling:rolling_eachTime="300"
+            rolling:rolling_orientation="downUp"
+            rolling:rolling_pause="1000"/>
+
+        <TextView
+            android:id="@+id/am_rolling_downUp_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="(0/0)"
+            android:textColor="@color/Cranberry"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Venus"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="leftRight eachTime=500 pause=1000"
+        android:textColor="@color/LinkWater"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.jkb.rollinglayout.RollingLayout
+            android:id="@+id/rollingleftRight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            rolling:rolling_eachTime="500"
+            rolling:rolling_orientation="leftRight"
+            rolling:rolling_pause="1000"/>
+
+        <TextView
+            android:id="@+id/am_rolling_leftRight_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="(0/0)"
+            android:textColor="@color/Cranberry"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Venus"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="rightLeft eachTime=800 pause=2000"
+        android:textColor="@color/LinkWater"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.jkb.rollinglayout.RollingLayout
+            android:id="@+id/rollingRightLeft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            rolling:rolling_eachTime="800"
+            rolling:rolling_orientation="rightLeft"
+            rolling:rolling_pause="2000"/>
+
+        <TextView
+            android:id="@+id/am_rolling_rightLeft_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="(0/0)"
+            android:textColor="@color/Cranberry"/>
+    </LinearLayout>
 </LinearLayout>
