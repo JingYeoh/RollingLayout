@@ -89,7 +89,7 @@ public interface RollingLayoutAction {
     void addOnRollingChangedListener(@NonNull OnRollingChangedListener onRollingChangedListener);
 
     /**
-     * set a listener to listen RolligLayout rolling item click action.
+     * set a listener to listen RollingLayout rolling item click action.
      */
     void setOnRollingItemClickListener(@NonNull OnRollingItemClickListener onRollingItemClickListener);
 
