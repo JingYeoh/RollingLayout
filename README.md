@@ -89,4 +89,4 @@ compile 'com.justkiddingbaby:rollinglayout:the latest version'
 ## License
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/License_icon-mit-88x31-2.svg/128px-License_icon-mit-88x31-2.svg.png)
 
-RollingLayout is available under the MIT license. See the LICENSE file for more info.
+RollingLayout is available under the MIT license. See the [LICENSE](https://opensource.org/licenses/MIT) file for more info.

@@ -88,4 +88,4 @@ compile 'com.justkiddingbaby:rollinglayout:最新版'
 ## 许可
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/License_icon-mit-88x31-2.svg/128px-License_icon-mit-88x31-2.svg.png)
 
-RollingLayout遵循MIT开源许可协议.查看更多信息请点击LICENSE.
+RollingLayout遵循MIT开源许可协议.查看更多信息请点击[LICENSE](https://opensource.org/licenses/MIT).
